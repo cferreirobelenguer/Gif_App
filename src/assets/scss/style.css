@@ -1,0 +1,70 @@
+.body {
+  text-align: center;
+  padding: 20px;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(234, 234, 234);
+}
+
+.card_container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_title {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(206, 136, 233);
+  text-shadow: 0.1em 0.1em 0.2em rgb(81, 77, 85);
+}
+
+.card_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card_input .form_submit {
+  padding: 20px;
+  background-color: rgb(206, 136, 233);
+  border-radius: 10px;
+}
+.card_input .submit_container {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.inputStyle {
+  background-color: rgb(206, 136, 233);
+  border-style: none;
+}
+
+.btn_submit {
+  padding: 10px 50px 10px 50px;
+  background-color: rgb(206, 136, 233);
+  border-radius: 10px;
+  border-style: none;
+  border-color: rgb(206, 136, 233);
+  color: rgb(81, 77, 85);
+}
+
+.card_categories {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.valor {
+  padding: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
