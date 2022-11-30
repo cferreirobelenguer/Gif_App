@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { AddCategory } from './components/AddCategory'
-import { GifGrid } from './components/GifGrid'
+import { AddCategory, GifGrid } from './components'
 
 export const GifExpertApp=()=>{
     const [categories,setCategories]=useState([])
@@ -11,7 +10,8 @@ export const GifExpertApp=()=>{
         setCategories([newCategory,...categories])
         console.log(newCategory)
     }
-
+    //se manda por props la función onNewCategory al componente AddCategory pasando el evento
+    //Ya que necesitamos el inputValue que el dato que introduce el usuario para modificar setCategories
     return(
         <div className="card_container">
             <div className="card_title">
@@ -19,7 +19,7 @@ export const GifExpertApp=()=>{
             </div>
             <AddCategory  onNewCategory={event=>onAddCategory(event)}></AddCategory>
             <div className="card_categories">
-                
+                {/*Se recorren las categorías, poniendo como key el id*/}
                     {categories.map(i=>(
                             <div key={i} >
                                 <GifGrid 

@@ -5,13 +5,15 @@ export const AddCategory=({onNewCategory})=>{
 
     const handlerChange=({target})=>{
         setInputValue(target.value)
-        console.log(inputValue)
     }
 
     const onSubmit=(event)=>{
+        //onSubmit es llamado en la etiqueta form y en el botón submit
+        //Esto significa que se mandan los datos tanto si presonamos enter con el teclado como si presionamos el botón
         event.preventDefault()
-        console.log(inputValue)
         if(inputValue.trim().length<=1) return;
+        // Se coge el inputValue y se pone de parámetro en el método obtenido por props onNewCategory
+        //Este método se va a encargar de modificar el arreglo dentro del state categories del componente GiftExpertApp
         onNewCategory(inputValue.trim())
         setInputValue("")
     }
