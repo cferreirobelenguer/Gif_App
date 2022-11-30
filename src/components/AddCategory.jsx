@@ -16,6 +16,7 @@ export const AddCategory=({onNewCategory})=>{
         //Este método se va a encargar de modificar el arreglo dentro del state categories del componente GiftExpertApp
         onNewCategory(inputValue.trim())
         setInputValue("")
+        return "Enviado"
     }
     return(
         <div className="card_input">
@@ -25,7 +26,9 @@ export const AddCategory=({onNewCategory})=>{
                         className="inputStyle"
                         type="text"
                         placeholder="Introduce tu gift a buscar"
-                        onChange={handlerChange}    
+                        onChange={handlerChange}
+                        required    
+                        value={inputValue}
                     />
                 </form>
             </div>
