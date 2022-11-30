@@ -3,10 +3,10 @@ import { UseFetchGifs } from '../hooks/useFetchGifs'
 import { GifItem } from '../components'
 
 export const GifGrid=({category,idKey})=>{
-    const {datos,getGifts}=UseFetchGifs(category)
+    const {datos,getGifs}=UseFetchGifs(category)
 
     useEffect(()=>{
-        getGifts(category)
+        getGifs(category)
     },[category])
     
     return(
@@ -19,8 +19,6 @@ export const GifGrid=({category,idKey})=>{
                             <GifItem title={title} url={url}></GifItem>
                         </div>
                     )
-                    
-                    
 
                 })}
             </div>
