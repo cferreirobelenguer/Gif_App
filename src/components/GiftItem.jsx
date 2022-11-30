@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const GifItem=({image})=>{
+export const GifItem=({title,url})=>{
     return(
         <div className="card">
             
-            <img src={image.url} alt="" className="imagenStyle"/>
-            <p>{image.title}</p>
+            <img src={url} alt={title} className="imagenStyle"/>
+            <p>{title}</p>
         </div>
     )
 }

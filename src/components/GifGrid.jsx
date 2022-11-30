@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import { UseFetchGifs } from '../assets/hooks/useFetchGifs'
+import { UseFetchGifs } from '../hooks/useFetchGifs'
 import { GifItem } from '../components'
 
 export const GifGrid=({category,idKey})=>{
@@ -13,10 +13,10 @@ export const GifGrid=({category,idKey})=>{
         <div>
             <div key={idKey} className='valor'>
                 <h3 className='valor'>{category}</h3>
-                {datos.map((image)=>{
+                {datos.map(({id,title,url})=>{
                     return(
-                        <div key={image.id} className="card-grid">
-                            <GifItem image={image}></GifItem>
+                        <div key={id} className="card-grid">
+                            <GifItem title={title} url={url}></GifItem>
                         </div>
                     )
                     

@@ -6,10 +6,13 @@ exports[`Pruebas en <GifItem/> Debe de hacer match con el snapshot 1`] = `
     class="card"
   >
     <img
-      alt=""
+      alt="Animation Lol GIF by Disney"
       class="imagenStyle"
+      src="https://giphy.com/gifs/disney-animation-bambi-IgLt8tZcGGYXS"
     />
-    <p />
+    <p>
+      Animation Lol GIF by Disney
+    </p>
   </div>
 </div>
 `;
