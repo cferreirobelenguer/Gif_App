@@ -8,6 +8,7 @@ export const AddCategory=({onNewCategory})=>{
     }
 
     const onSubmit=(event)=>{
+        
         //onSubmit es llamado en la etiqueta form y en el botón submit
         //Esto significa que se mandan los datos tanto si presonamos enter con el teclado como si presionamos el botón
         event.preventDefault()
@@ -15,13 +16,13 @@ export const AddCategory=({onNewCategory})=>{
         // Se coge el inputValue y se pone de parámetro en el método obtenido por props onNewCategory
         //Este método se va a encargar de modificar el arreglo dentro del state categories del componente GiftExpertApp
         onNewCategory(inputValue.trim())
-        setInputValue("")
-        return "Enviado"
+        
+        
     }
     return(
         <div className="card_input">
             <div className="form_submit">
-                <form onSubmit={onSubmit}>
+                <form onSubmit={onSubmit} aria-label="form">
                     <input 
                         className="inputStyle"
                         type="text"
