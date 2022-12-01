@@ -8,10 +8,12 @@ export const GifGrid=({category,idKey})=>{
     return(
         <div>
             <div key={idKey} className='valor'>
-                <h3 className='valor'>{category}</h3>
+                
                 {
                     isLoading && (<h2>Cargando...</h2>)
                 }
+
+                <h3 className='valor'>{category}</h3>
                 {datos.map(({id,title,url})=>{
                     return(
                         <div key={id} className="card-grid">
